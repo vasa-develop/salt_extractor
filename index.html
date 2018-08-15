@@ -37,36 +37,6 @@
 		"type": "function"
 	},
 	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "cardId",
-				"type": "string"
-			},
-			{
-				"name": "userId",
-				"type": "string"
-			},
-			{
-				"name": "cardClass",
-				"type": "string"
-			},
-			{
-				"name": "orgId",
-				"type": "string"
-			},
-			{
-				"name": "publicInfo",
-				"type": "string"
-			}
-		],
-		"name": "addCard",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"constant": true,
 		"inputs": [
 			{
@@ -83,6 +53,20 @@
 		],
 		"payable": false,
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "getUserId",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -105,29 +89,6 @@
 			},
 			{
 				"name": "salt",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "docId",
-				"type": "string"
-			}
-		],
-		"name": "getDocumentInfo",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			},
-			{
-				"name": "",
 				"type": "string"
 			}
 		],
@@ -388,6 +349,40 @@
 		"constant": false,
 		"inputs": [
 			{
+				"name": "cardId",
+				"type": "string"
+			},
+			{
+				"name": "userId",
+				"type": "string"
+			},
+			{
+				"name": "cardClass",
+				"type": "string"
+			},
+			{
+				"name": "orgId",
+				"type": "string"
+			},
+			{
+				"name": "communityCardId",
+				"type": "string"
+			},
+			{
+				"name": "publicInfo",
+				"type": "string"
+			}
+		],
+		"name": "addCard",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
 				"name": "cardIdFrom",
 				"type": "string"
 			},
@@ -438,8 +433,7 @@
 	}
 ]);
 
-        var Coursetro = CoursetroContract.at('0xe4e412cf63fc8fddafe2cd29296af2b1ab55f021');
-        //var Coursetro = CoursetroContract.at('0x631ebd7004d6bd57ad1f94a179b68cca00192e32');
+        var Coursetro = CoursetroContract.at('0x8b182ff3daa99386f30bc08935c9ad759a51a231');
         
         //console.log(Coursetro);
 
@@ -500,7 +494,7 @@
     }
 
     function f5(){
-        Coursetro.addCard("5b6ee99f450075715a1b95b2", "5b6ee99f450075715a1b95b1", "cardClass02", "orgId02", "publicInfo02", {from: web3.eth.defaultAccount, gas: '900000'}, function(error, result){
+        Coursetro.addCard("5b6ee99f450075715a1b95b2", "5b6ee99f450075715a1b95b1", "cardClass02", "orgId02", "5b72c6a9d1347a320adc521b", "publicInfo02", {from: web3.eth.defaultAccount, gas: '900000'}, function(error, result){
         	if(!error)
                 {
                     console.log("RESULT:  ");
@@ -596,6 +590,8 @@
             }  
         })
 	}
+
+	
     </script>
 
 </body>
