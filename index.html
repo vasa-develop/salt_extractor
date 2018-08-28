@@ -56,7 +56,7 @@
 		"type": "function"
 	},
 	{
-		"constant": false,
+		"constant": true,
 		"inputs": [],
 		"name": "getUserId",
 		"outputs": [
@@ -66,7 +66,7 @@
 			}
 		],
 		"payable": false,
-		"stateMutability": "nonpayable",
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -433,95 +433,11 @@
 	}
 ]);
 
-        var Coursetro = CoursetroContract.at('0x67bb49f7bd40b6a1226d77dc07fb38f03680c94f');
+        var Coursetro = CoursetroContract.at('0x9d13c6d3afe1721beef56b55d303b09e021e27ab');
         
         //console.log(Coursetro);
 
-    function f1(){
-        Coursetro.addOrg("orgId02", "orgClass02", "metadataHash02", "salt02", {from: web3.eth.defaultAccount,gas: '900000'}, function(error, result){
-        	if(!error)
-                {
-                    console.log("RESULT:  ");
-                    console.log(result);
-                }
-            else{
-                console.log("ERROR:  ");
-                console.error(error);
-            }
-        });
-	}
-
-	function f2(){
-        Coursetro.getOrg("orgId02", function(error, result){
-            if(!error)
-                {
-                    console.log("RESULT:  ");
-                    console.log(result);
-                }
-            else{
-                console.log("ERROR:  ");
-                console.error(error);
-            }
-		});
-    }
-
-    function f3(){
-    	Coursetro.addUser("5b6ee99f450075715a1b95b1", "userClass02", "publicInfo02", "metadataHash02", "salt02", {from: web3.eth.defaultAccount,gas: '900000'}, function(error, result){
-        	if(!error)
-                {
-                    console.log("RESULT:  ");
-                    console.log(result);
-                }
-            else{
-                console.log("ERROR:  ");
-                console.error(error);
-            }
-        });
-    }
-
-    function f4(){
-        Coursetro.getUser("5b6ee99f450075715a1b95b1", function(error, result){
-            if(!error)
-                {
-                    console.log("RESULT:  ");
-                    console.log(result);
-                }
-            else{
-                console.log("ERROR:  ");
-                console.error(error);
-            }
-		});
-    }
-
-    function f5(){
-        Coursetro.addCard("5b6ee99f450075715a1b95b2", "5b6ee99f450075715a1b95b1", "cardClass02", "orgId02", "5b72c6a9d1347a320adc521b", "publicInfo02", {from: web3.eth.defaultAccount, gas: '900000'}, function(error, result){
-        	if(!error)
-                {
-                    console.log("RESULT:  ");
-                    console.log(result);
-                }
-            else{
-                console.log("ERROR:  ");
-                console.error(error);
-            }
-        });
-    }
-
-    function f6(){
-        Coursetro.getCardInfo("5b6ee99f450075715a1b95b2", function(error, result){
-            if(!error)
-                {
-                    console.log("RESULT:  ");
-                    console.log(result);
-                }
-            else{
-                console.log("ERROR:  ");
-                console.error(error);
-            }
-		});
-    }
-
-    function f7(){
+    function addDocument(){
 		Coursetro.addDocumentForUser("5b6eeaff450075715a1b95b3,6f67acd28e8e60c1b0fdf610e0b9d6689c7d622ba5de4b4c6e9782ce9b011158,metadata02,publicInfo02",",","5b6ee99f450075715a1b95b2", {from: web3.eth.defaultAccount,gas: '900000'}, function(error, result){
             if(!error)
                 {
@@ -535,19 +451,7 @@
 		})
 	}
 
-	function f8(){
-		Coursetro.getDocumentInfo("5b6eeaff450075715a1b95b3", function(error, result){
-            if(!error)
-                {
-                    console.log("RESULT:  ");
-                    console.log(result);
-                }
-            else{
-                console.log("ERROR:  ");
-                console.error(error);
-            }  
-		});
-	}	
+		
 
 	function f9(){
 		Coursetro.addToWhiteList("5b6ee99f450075715a1b95b2", "5b6eeaff450075715a1b95b3", ",", "token02", {from: web3.eth.defaultAccount,gas: '900000'}, function(error, result){
