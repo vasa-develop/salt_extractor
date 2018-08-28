@@ -440,11 +440,13 @@
         //----------------------------------------------------------------------------------------------------------
         //----------------------------------------------------------------------------------------------------------
 
-        
+
         //console.log(Coursetro);
 
+         
+
     function addDocument(){
-		Coursetro.addDocumentForUser("5b6eeaff450075715a1b95b3,6f67acd28e8e60c1b0fdf610e0b9d6689c7d622ba5de4b4c6e9782ce9b011158,metadata02,publicInfo02",",","5b6ee99f450075715a1b95b2", {from: web3.eth.defaultAccount,gas: '900000'}, function(error, result){
+		Coursetro.addDocumentForUser("docId,6f67acd28e8e60c1b0fdf610e0b9d6689c7d622ba5de4b4c6e9782ce9b011158,metadata02,publicInfo02,salt",",","5b8401eb6dc11367e6dbccb2", {from: web3.eth.defaultAccount,gas: '900000'}, function(error, result){
             if(!error)
                 {
                     console.log("RESULT:  ");
@@ -460,7 +462,7 @@
 		
 
 	function f9(){
-		Coursetro.addToWhiteList("5b6ee99f450075715a1b95b2", "5b6eeaff450075715a1b95b3", ",", "token02", {from: web3.eth.defaultAccount,gas: '900000'}, function(error, result){
+		Coursetro.addToWhiteList("5b8401eb6dc11367e6dbccb2", "5b6eeaff450075715a1b95b3", ",", "token02", {from: web3.eth.defaultAccount,gas: '900000'}, function(error, result){
 			if(!error)
                 {
                     console.log("RESULT:  ");
