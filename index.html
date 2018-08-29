@@ -24,329 +24,6 @@
          var CoursetroContract = web3.eth.contract([
 	{
 		"constant": false,
-		"inputs": [],
-		"name": "isSuperUser",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "docId",
-				"type": "string"
-			}
-		],
-		"name": "getDocumentSaltForIndv",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "getUserId",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "userId",
-				"type": "string"
-			}
-		],
-		"name": "getUser",
-		"outputs": [
-			{
-				"name": "userClass",
-				"type": "string"
-			},
-			{
-				"name": "metadataHash",
-				"type": "string"
-			},
-			{
-				"name": "salt",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "cardIdFrom",
-				"type": "string"
-			},
-			{
-				"name": "cardIdTo",
-				"type": "string"
-			},
-			{
-				"name": "docIds",
-				"type": "string"
-			},
-			{
-				"name": "separator",
-				"type": "string"
-			}
-		],
-		"name": "shareDocumentWithUser",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "docId",
-				"type": "string"
-			}
-		],
-		"name": "isUserOwner",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "cardId",
-				"type": "string"
-			},
-			{
-				"name": "role",
-				"type": "uint256"
-			},
-			{
-				"name": "level",
-				"type": "uint256"
-			}
-		],
-		"name": "addCardPermissions",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "orgId",
-				"type": "string"
-			}
-		],
-		"name": "getOrg",
-		"outputs": [
-			{
-				"name": "orgClass",
-				"type": "string"
-			},
-			{
-				"name": "metaDataHash",
-				"type": "string"
-			},
-			{
-				"name": "salt",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "isCardPresent",
-		"outputs": [
-			{
-				"name": "isValid",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "data",
-				"type": "string"
-			},
-			{
-				"name": "separator",
-				"type": "string"
-			},
-			{
-				"name": "cardId",
-				"type": "string"
-			}
-		],
-		"name": "addDocumentForUser",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "cardId",
-				"type": "string"
-			}
-		],
-		"name": "getCardInfo",
-		"outputs": [
-			{
-				"name": "pubKey",
-				"type": "address"
-			},
-			{
-				"name": "cardClass",
-				"type": "string"
-			},
-			{
-				"name": "orgId",
-				"type": "string"
-			},
-			{
-				"name": "publicInfo",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "userId",
-				"type": "string"
-			},
-			{
-				"name": "userClass",
-				"type": "string"
-			},
-			{
-				"name": "publicInfo",
-				"type": "string"
-			},
-			{
-				"name": "metadataHash",
-				"type": "string"
-			},
-			{
-				"name": "salt",
-				"type": "string"
-			}
-		],
-		"name": "addUser",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "orgId",
-				"type": "string"
-			},
-			{
-				"name": "orgClass",
-				"type": "string"
-			},
-			{
-				"name": "metaDataHash",
-				"type": "string"
-			},
-			{
-				"name": "salt",
-				"type": "string"
-			}
-		],
-		"name": "addOrg",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "docId",
-				"type": "string"
-			},
-			{
-				"name": "token",
-				"type": "string"
-			}
-		],
-		"name": "isWhiteListToken",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			},
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
 		"inputs": [
 			{
 				"name": "cardId",
@@ -383,6 +60,81 @@
 		"constant": false,
 		"inputs": [
 			{
+				"name": "cardId",
+				"type": "string"
+			},
+			{
+				"name": "role",
+				"type": "uint256"
+			},
+			{
+				"name": "level",
+				"type": "uint256"
+			}
+		],
+		"name": "addCardPermissions",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "data",
+				"type": "string"
+			},
+			{
+				"name": "separator",
+				"type": "string"
+			},
+			{
+				"name": "cardId",
+				"type": "string"
+			}
+		],
+		"name": "addDocumentForUser",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "orgId",
+				"type": "string"
+			},
+			{
+				"name": "orgClass",
+				"type": "string"
+			},
+			{
+				"name": "metaDataHash",
+				"type": "string"
+			},
+			{
+				"name": "salt",
+				"type": "string"
+			}
+		],
+		"name": "addOrg",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
 				"name": "cardIdFrom",
 				"type": "string"
 			},
@@ -401,6 +153,73 @@
 		],
 		"name": "addToWhiteList",
 		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "userId",
+				"type": "string"
+			},
+			{
+				"name": "userClass",
+				"type": "string"
+			},
+			{
+				"name": "publicInfo",
+				"type": "string"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "metadataHash",
+				"type": "string"
+			},
+			{
+				"name": "salt",
+				"type": "string"
+			}
+		],
+		"name": "addUser",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "isSuperUser",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "docId",
+				"type": "string"
+			}
+		],
+		"name": "isUserOwner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -430,10 +249,178 @@
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "cardIdFrom",
+				"type": "string"
+			},
+			{
+				"name": "cardIdTo",
+				"type": "string"
+			},
+			{
+				"name": "docIds",
+				"type": "string"
+			},
+			{
+				"name": "separator",
+				"type": "string"
+			}
+		],
+		"name": "shareDocumentWithUser",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "cardId",
+				"type": "string"
+			}
+		],
+		"name": "getCardInfo",
+		"outputs": [
+			{
+				"name": "pubKey",
+				"type": "address"
+			},
+			{
+				"name": "cardClass",
+				"type": "string"
+			},
+			{
+				"name": "orgId",
+				"type": "string"
+			},
+			{
+				"name": "publicInfo",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "docId",
+				"type": "string"
+			}
+		],
+		"name": "getDocumentSaltForIndv",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "orgId",
+				"type": "string"
+			}
+		],
+		"name": "getOrg",
+		"outputs": [
+			{
+				"name": "orgClass",
+				"type": "string"
+			},
+			{
+				"name": "metaDataHash",
+				"type": "string"
+			},
+			{
+				"name": "salt",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "email",
+				"type": "string"
+			}
+		],
+		"name": "getUserId",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "email",
+				"type": "string"
+			}
+		],
+		"name": "isValidUser",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "docId",
+				"type": "string"
+			},
+			{
+				"name": "token",
+				"type": "string"
+			}
+		],
+		"name": "isWhiteListToken",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			},
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
 	}
 ]);
 
-        var Coursetro = CoursetroContract.at('0x9d13c6d3afe1721beef56b55d303b09e021e27ab');
+        var Coursetro = CoursetroContract.at('0xd0a5685a4ba479d0ff4e86ca8300738573816c63');
         
 
         //----------------------------------------------------------------------------------------------------------
